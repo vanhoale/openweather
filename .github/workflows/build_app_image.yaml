@@ -16,6 +16,6 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: deployment/.
+          context: docker/.
           push: true
           tags: hoale/go_app:1.0
