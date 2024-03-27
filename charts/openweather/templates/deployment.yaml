@@ -46,6 +46,9 @@ spec:
           volumeMounts:
             {{- toYaml . | nindent 12 }}
           {{- end }}
+          env:
+          - name: OPENWEATHER_API_KEY
+            value: {{ .Values.openweatherApiKey }}        
       {{- with .Values.volumes }}
       volumes:
         {{- toYaml . | nindent 8 }}
